@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОГУРЦЫ "ДЯДЯ ВАНЯ"</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div>
+        <h1 class="logo-text ramka">
+            <strong>ОГУРЧИКИ ОТ ДЯДИ ВАНИ</strong><br>
+            - пальчики откусишь!
+        </h1>
+        <img src="logo_2023_СМУК.png" width="100" height="100" alt="дядя Ваня">
+    </div>
+</header>
+
+<main class="main-grid">
+
+    <aside class="kolonka kolonka-left">
+
+        <section class="ad">
+            <h2 class="ad-title">ТЫ ЖЕ ХОЧЕШЬ ХРУСТЯЩИЕ ОГУРЧИКИ?</h2>
+            <p>Купи сейчас и получи <strong>ТРИ БАНКИ</strong> по цене двух!</p>
+            <button class="ad-button">ТЫКНИ НА МЕНЯ</button>
+        </section>
+
+        <div class="ad ad-warning">
+            <p class="blink">⚠️ УСПЕЙ КУПИТЬ! ЖЕЛАЮЩИХ МНОГО! ⚠️</p>
+        </div>
+
+        <div class="ad">
+            <p>Твоя семья скажет<br>СПАСИБО!</p>
+        </div>
+
+        <img src="ogur.png" width="150" height="200" alt="огурцы">
+        <img src="ogur.png" width="150" height="190" alt="огурцы">
+        <img src="ogur.png" width="150" height="190" alt="огурцы">
+        <img src="ogur.png" width="150" height="190" alt="огурцы">
+        <img src="ogur.png" width="150" height="190" alt="огурцы">
+        <img src="ogur.png" width="150" height="200" alt="огурцы">
+
+    </aside>
+
+    <div class="content">
+
+        <section>
+            <h2 class="section-title">ТОП-5 ПРИЧИН КУПИТЬ НАШИ ОГУРЧИКИ</h2>
+            <ol class="reasons-list">
+                <li class="reason-item">Дядя Ваня целует каждую банку перед отправкой!</li>
+                <li class="reason-item">Беременные о них просто мечтают..</li>
+                <li class="reason-item">Рассол спасёт от похмелья</li>
+                <li class="reason-item">Под водочку самое ТО!</li>
+                <li class="reason-item">Под крышкой банки есть КОД для розыгрыша квартиры в Воркуте!</li>
+            </ol>
+        </section>
+
+        <section class="prizivi">
+            <h2 class="section-title">Если было неубедительно:</h2>
+            <p class="priziv">ДА КУПИ ТЫ УЖЕ!!</p>
+            <p class="priziv">ЭТО БУКВАЛЬНО ПАНАЦЕЯ ОТ ЛЮБЫХ БОЛЕЗНЕЙ</p>
+            <p class="priziv">БЕЗ НИХ ТЫ - ЛОХ!</p>
+            <p class="priziv">ВКУС КАК У ЗАКАТОК ТВОЕЙ ЛЮБИМОЙ БАБУЛИ</p>
+        </section>
+
+        <section class="otziv">
+            <h2 class="section-title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+
+            <div class="otziv-window">
+                <blockquote class="otziv-text">"Всегда их беру в прикуску к блинчикам из Ермолино! Это - вещь!"</blockquote>
+                <p class="otziv-avtor">Ваня, школьник</p>
+            </div>
+
+            <div class="otziv-window">
+                <blockquote class="otziv-text">"Огурцы доела, теперь банку использую для сохранения формы своей шапки, удобно!"</blockquote>
+                <p class="otziv-author">Анна, домохозяйка</p>
+            </div>
+
+            <div class="otziv-window">
+                <blockquote class="otziv-text">"Пришло быстро, упаковано хорошо. На вид — вкусные! Открыть не вышло..."</blockquote>
+                <p class="otziv-author">Мария, студентка</p>
+            </div>
+
+            <div class="otziv-window">
+                <blockquote class="otziv-text">"С ними получается самая вкусная солянка, только тсс.."</blockquote>
+                <p class="otziv-author">Елена, бухгалтер</p>
+            </div>
+
+        </section>
+
+    </div>
+
+    <aside class="kolonka kolonka-right">
+
+        <button id="theme-toggle" class="ad-button ad-button-big" style="width:100%; margin-bottom:20px;">
+            ТЁМНАЯ ТЕМА
+        </button>
+
+        <section class="ad">
+            <h3 class="ad-title">ЛЕНТА ОТЗЫВОВ</h3>
+            <div id="reviews-list"></div>
+        </section>
+
+        <section class="ad">
+            <h3 class="ad-title">ОСТАВИТЬ ОТЗЫВ</h3>
+
+            <form id="review-form">
+                <input type="text" id="review-name" placeholder="Ваше имя" style="width:100%; padding:8px; margin-bottom:10px;">
+                <textarea id="review-text" placeholder="Ваш отзыв" style="width:100%; padding:8px; margin-bottom:10px;"></textarea>
+
+                <input type="file" id="review-image" accept="image/*" style="margin-bottom:10px;">
+
+                <button type="submit" class="ad-button" style="width:100%;">Добавить отзыв</button>
+            </form>
+
+            <p id="review-error" style="color:red; font-weight:bold; display:none;">Заполните имя и текст!</p>
+        </section>
+
+        <section class="ad">
+            <h3 class="ad-title">СУПЕР-ПРЕДЛОЖЕНИЕ</h3>
+            <p>Только сегодня: при покупке огурцов получи <strong>РЮМКУ</strong> в подарок!</p>
+            <p class="ad-price">ВСЕГО 300 руб!</p>
+            <button class="ad-button ad-button-big">ЗАКАЗАТЬ СЕЙЧАС</button>
+        </section>
+
+        <div class="ad">
+            <p>ВЫ БЕЗ БАНОЧКИ ОГУРЦОВ ОТСЮДА НЕ УЙДЁТЕ</p>
+            <p>я серьёзно.</p>
+        </div>
+
+        <img src="ogur.png" width="150" height="200" alt="огурцы">
+        <img src="ogur.png" width="150" height="200" alt="огурцы">
+        <img src="ogur.png" width="150" height="200" alt="огурцы">
+        <img src="ogur.png" width="150" height="200" alt="огурцы">
+        <img src="ogur.png" width="150" height="200" alt="огурцы">
+        <img src="ogur.png" width="150" height="200" alt="огурцы">
+
+    </aside>
+
+</main>
+
+<footer class="footer">
+    <p>2026 ООО "Дядя Ваня Трейдинг". Все права защищены. Мы за вами следим.</p>
+    <p>Контакты: тот, кому нужно — ЗНАЕТ!</p>
+</footer>
+    <script src="theme.js"></script>
+    <script src="cookie.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>
