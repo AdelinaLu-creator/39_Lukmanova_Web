@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №6</title>
+    <link rel="stylesheet" href="css/style6.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <header class="header">
+        <div class="container header-inner">
+            <h1>Лабораторная №6</h1>
+            <nav class="nav">
+                <button data-tab="facts" class="nav-btn active">Факты</button>
+                <button data-tab="gender" class="nav-btn">Пол</button>
+                <button data-tab="users" class="nav-btn">Пользователи</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="facts" class="tab active">
+            <div class="top-bar">
+                <h2>Бесполезные факты</h2>
+                <button id="createPost" class="btn btn-primary">Добавить факт</button>
+            </div>
+            <div id="factsList" class="grid"></div>
+        </section>
+        
+        <section id="gender" class="tab">
+            <div class="top-bar">
+                <h2>Определение пола</h2>
+                <input id="singleNameInput" type="text" placeholder="Введите имя...">
+                <button id="predictSingleBtn" class="btn btn-primary">Проверить</button>
+            </div>
+            <div id="genderList" class="grid"></div>
+            <div id="singleGenderResult" class="card hidden"></div>
+        </section>
+        
+        <section id="users" class="tab">
+            <div class="top-bar">
+                <h2>Случайные пользователи</h2>
+                <input id="searchUser" type="text" placeholder="Поиск по имени, email, городу...">
+                <button id="addUserBtn" class="btn btn-secondary">+ Добавить</button>
+            </div>
+            <div id="usersList" class="grid"></div>
+        </section>
+    </main>
+    
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Новый факт</h3>
+            <input id="modalTitle" type="text" placeholder="Заголовок">
+            <textarea id="modalBody" placeholder="Текст для бесполезного факта"></textarea>
+            <div class="modal-actions">
+                <button id="closeModal" class="btn btn-secondary">Отмена</button>
+                <button id="savePost" class="btn btn-primary">Сохранить</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="toast" class="toast"></div>
+    
+    <script type="module" src="js/main.js"></script>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>Лабораторная работа №6 © 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
