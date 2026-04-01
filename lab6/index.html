@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style6.css">
+</head>
+<body>
+
+    <div class="container">
+        <header style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+            <h1 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 0;">Лабораторная работа №6</h1>
+        </header>
+
+        <nav class="nav">
+            <button class="nav-btn active" data-tab="facts">Факты</button>
+            <button class="nav-btn" data-tab="gender">Определение пола</button>
+            <button class="nav-btn" data-tab="users">Пользователи</button>
+        </nav>
+
+        <section id="facts" class="tab active">
+            <div class="tab-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h1 style="font-weight: 800; letter-spacing: -1px;">Бесполезные факты</h1>
+                <button id="openFactModal" class="nav-btn" style="background: var(--accent); color: white; padding: 12px 25px;"> Добавить факт</button>
+            </div>
+            
+            <div id="factsList" class="grid">
+                </div>
+        </section>
+
+        <section id="gender" class="tab">
+            <div class="card central-card" style="max-width: 550px; margin: 0 auto; text-align: center; padding: 40px;">
+                <h1 style="margin-bottom: 10px;">Проверка имени</h1>
+                <p style="opacity: 0.6; margin-bottom: 30px;">Определить пол</p>
+                
+                <div class="input-group" style="display: flex; gap: 10px; background: rgba(0,0,0,0.2); padding: 5px; border-radius: 15px; border: 1px solid var(--border);">
+                    <input type="text" id="singleNameInput" placeholder="Имя (на латинице)..." style="border: none; background: transparent; flex: 1; padding: 15px; color: white; outline: none;">
+                    <button id="predictSingleBtn" class="nav-btn" style="background: var(--accent); color: white; border-radius: 12px;">Анализировать</button>
+                </div>
+
+                <div id="singleGenderResult" class="hidden" style="margin-top: 30px;">
+                    </div>
+            </div>
+        </section>
+
+        <section id="users" class="tab">
+            <div class="tab-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h1 style="font-weight: 800; letter-spacing: -1px;">Команда проекта</h1>
+                <button id="openUserModal" class="nav-btn" style="background: var(--accent); color: white; padding: 12px 25px;">Добавить юзера</button>
+            </div>
+
+            <div id="usersList" class="grid">
+                </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 1px solid var(--border); margin-top: 40px; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+                <p>2026 РХТУ им. Д.И. Менделеева.</p>
+                <p>Лабораторная работа <strong>№7</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="factModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 style="margin-top: 0;">Новый факт</h2>
+            <p style="font-size: 0.9rem; opacity: 0.5; margin-bottom: 20px;">Введите текст</p>
+            <textarea id="modalFactBody" rows="5" placeholder="Напишите какой-нибудь факт"></textarea>
+            <div class="modal-actions" style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
+                <button id="closeFactModal" class="nav-btn" style="background: rgba(255,255,255,.05);">Отмена</button>
+                <button id="saveFact" class="nav-btn" style="background: var(--accent); color: white;">Сохранить факт</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="userModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 style="margin-top: 0;">Регистрация пользователя</h2>
+            <div class="form-group">
+                <label style="font-size: 0.8rem; opacity: 0.5;">Полное имя</label>
+                <input type="text" id="userNameInput" placeholder="Например Ivan">
+            </div>
+            <div class="form-group" style="margin-top: 15px;">
+                <label style="font-size: 0.8rem; opacity: 0.5;">Электронная почта</label>
+                <input type="email" id="userEmailInput" placeholder="example@mail.com">
+            </div>
+            <div class="modal-actions" style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 30px;">
+                <button id="closeUserModal" class="nav-btn" style="background: rgba(255,255,255,0.05);">Отмена</button>
+                <button id="saveUser" class="nav-btn" style="background: var(--accent); color: white;">Добавить в базу</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Успешно обновлено</div>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
